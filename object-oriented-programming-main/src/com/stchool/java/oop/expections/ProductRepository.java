@@ -8,7 +8,7 @@ public class ProductRepository {
 //CRUD Operations
 
 
-    public ArrayList<Product> products = new ArrayList<>();
+    private ArrayList<Product> products = new ArrayList<>();
 
 
     public Product save(Product product) {
@@ -21,10 +21,11 @@ public class ProductRepository {
     }
 
     public Product getById(String id) {
-        System.out.println("Product id i want to get is " + id);
+//        System.out.println("Product id i want to get is " + id);
         for (Product product : products) {
-            if (product.getId().equals(id)) ;
-            return product;
+            if (product.getId().equals(id)) {
+                return product;
+            }
         }
         return null;
     }
